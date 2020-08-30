@@ -63,7 +63,7 @@ public class jurosSimples {
 
                     System.out.println("o Capital é de " + capital);
 
-                    //juros
+                   //juros Vitor
 
                 } else if (op == 2) {
                     System.out.println("Digite a Capital");
