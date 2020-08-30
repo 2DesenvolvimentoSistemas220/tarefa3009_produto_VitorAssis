@@ -1,4 +1,4 @@
-/*
+t/*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
@@ -87,6 +87,35 @@ public class jurosSimples {
 
                     System.out.println("O seu Juros é de: " + juros);
                      } 
+            
+        }else if(op ==3){ 
+                     System.out.println("Digite o Valor do Capipta(c)");
+                     capital = Float.parseFloat(entrada.nextLine);
+            
+                     System.out.println("Digite em Quantos meses o capital ficara aplicado(t)");
+                     tempo = Float.paraseFloat(entrada.nextLine);
+            
+                     System.out.println("Dgite a taxa(i)");
+                     taxa = Float.parseFloat(entrada.nextLine);
+            
+                if(taxa = taxa){ 
+                    taxa= ((taxa*capita) / tempo);
+                    
+                    System.out.println("A taxa de juros´r de" +capita+"juros"+taxa);
+                    
+                }else if( op == 4){
+                    System.out.prinln("Digite Quantos meses o capital ficara aplicado(t)");
+                    tempo = Float.parseFloat(entrada.nextLine);
+                    
+                    System.out.println("Digite o Valor do Capital(c)");
+                    capital = Float.parseFloat(entrada.nextLine);
+                    
+                    System.out.println("Digite a Taxa(i)");
+                    taxa= Float.parseFloat(entrada.nextLine);
+                    tempo = tempo;
+                    
+                    montante = capital+juros / taxa;
+                    System.out.println("O tempo é Igual:" + capital+ "juros" + tempo)
 
                 else if (op == 5) {
                   System.out.println("Obrigado, até a próxima!");
