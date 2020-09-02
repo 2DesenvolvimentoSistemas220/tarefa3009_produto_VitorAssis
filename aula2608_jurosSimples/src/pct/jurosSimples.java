@@ -1,4 +1,4 @@
-t/*
+/*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
@@ -19,12 +19,12 @@ public class jurosSimples {
     public static void main(String[] args) {
 
         int op;
-        float taxa, capital, tempo, juros;
+        float taxa = 0, capital = 0, tempo = 0, juros = 0;
 
         Scanner entrada = new Scanner(System.in);
 
         // commite João Vitor Pereira
-        do {
+             do {
                 //apresentação
                 System.out.println("\n\t\t\t -- Calculadora de Juros Simples -- \n");
 
@@ -86,46 +86,51 @@ public class jurosSimples {
                     juros = capital * tempo * taxa;
 
                     System.out.println("O seu Juros é de: " + juros);
-                     } 
-            
-        }else if(op ==3){ 
+                     
+                    } else if (op == 3) {
                      System.out.println("Digite o Valor do Capipta(c)");
-                     capital = Float.parseFloat(entrada.nextLine);
+                     capital = Float.parseFloat(entrada.nextLine());
             
                      System.out.println("Digite em Quantos meses o capital ficara aplicado(t)");
-                     tempo = Float.paraseFloat(entrada.nextLine);
+                     tempo = Float.parseFloat(entrada.nextLine());
             
                      System.out.println("Dgite a taxa(i)");
-                     taxa = Float.parseFloat(entrada.nextLine);
-            
-                if(taxa = taxa){ 
-                    taxa= ((taxa*capita) / tempo);
+                     taxa = Float.parseFloat(entrada.nextLine());
+                    }
+                   if (taxa = taxa){ 
+                    taxa = ((taxa  * capital) / tempo);
                     
-                    System.out.println("A taxa de juros´r de" +capita+"juros"+taxa);
+                    System.out.println("A taxa de juros´r de" + capital +"juros"+taxa);
                     
+                     // tempo/prazo Giovanna
                 }else if( op == 4){
-                    System.out.prinln("Digite Quantos meses o capital ficara aplicado(t)");
-                    tempo = Float.parseFloat(entrada.nextLine);
+                    System.out.println("Digite o  Capital ");
+                    capital = Float.parseFloat(entrada.nextLine());
                     
-                    System.out.println("Digite o Valor do Capital(c)");
-                    capital = Float.parseFloat(entrada.nextLine);
+                    System.out.println("Digite o  juros");
+                    juros = Float.parseFloat(entrada.nextLine());
                     
-                    System.out.println("Digite a Taxa(i)");
-                    taxa= Float.parseFloat(entrada.nextLine);
-                    tempo = tempo;
+                    System.out.println("Digite a Taxa");
+                    taxa= Float.parseFloat(entrada.nextLine());
+                }
+                    if (tempo >= 30) {
+                        
+                        tempo = tempo / 100;
                     
-                    montante = capital+juros / taxa;
-                    System.out.println("O tempo é Igual:" + capital+ "juros" + tempo)
+                    tempo = juros * taxa * capital / 100;
+                    System.out.println("O tempo é Igual:" + tempo);
 
-                else if (op == 5) {
+                }else if (op == 5) {
                   System.out.println("Obrigado, até a próxima!");
                 }
                 else{             
                    System.out.println("O nnumero digitado não corresponde a nenhuma das opções.");
                     }
-        } while(op != 5);
+                } while(op != 5);
 
         }
     }
+
+   
 
 
