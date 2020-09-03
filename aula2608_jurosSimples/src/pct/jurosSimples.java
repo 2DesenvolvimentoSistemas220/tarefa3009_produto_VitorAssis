@@ -19,7 +19,7 @@ public class jurosSimples {
     public static void main(String[] args) {
 
         int op;
-        float taxa = 0, capital = 0, tempo = 0, juros = 0;
+        float taxa, capital, tempo, juros;
 
         Scanner entrada = new Scanner(System.in);
 
@@ -87,7 +87,7 @@ public class jurosSimples {
 
                     System.out.println("O seu Juros é de: " + juros);
                     
-                    //taxa Erasmo Batista
+                    //taxa Erasmo Batista (repassado/aperfeiçoado por Vitor Assis)
                      
                     } else if (op == 3) {
                         System.out.println("Digite o Valor do Capital(c)");
@@ -100,13 +100,13 @@ public class jurosSimples {
                         juros = Float.parseFloat(entrada.nextLine());
                     
                     
-                          tempo = tempo / 12;
+                        tempo = tempo / 12;
                     
                         taxa = ( juros /(  capital * tempo ) );
 
                         System.out.println("A taxa de juros é de " + taxa);
                         }
-                         // tempo/prazo Giovanna
+                         // tempo/prazo Giovanna (repassado/aperfeiçoado por joão)
 
                         else if( op == 4){
                         System.out.println("Digite o  Capital ");
@@ -118,12 +118,11 @@ public class jurosSimples {
                         System.out.println("Digite a Taxa");
                         taxa= Float.parseFloat(entrada.nextLine());
 
-                      if (tempo >= 30) {
-
-                            tempo = tempo / 100;
-
-                            tempo = juros * taxa * capital / 100;
-                       }System.out.println("O tempo é Igual:" + tempo);
+                        float test = capital * (taxa / 100);
+                        
+                        tempo = juros / test;
+                                
+                       System.out.println("O tempo aplicado é de: " + tempo + " meses ou " + tempo * 30 + " dias");
 
                 
                     }else if (op == 5) {
