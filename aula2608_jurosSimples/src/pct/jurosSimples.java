@@ -117,9 +117,11 @@ public class jurosSimples {
 
                         System.out.println("Digite a Taxa");
                         taxa= Float.parseFloat(entrada.nextLine());
-
+                        
+                        //primeiro multiplica capital * taxa
                         float test = capital * (taxa / 100);
                         
+                        //depois divide juros pelo resultado obtido, assim obtendo o Tempo/prazo
                         tempo = juros / test;
                                 
                        System.out.println("O tempo aplicado é de: " + tempo + " meses ou " + tempo * 30 + " dias");
