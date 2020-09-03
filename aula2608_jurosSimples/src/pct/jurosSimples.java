@@ -86,45 +86,51 @@ public class jurosSimples {
                     juros = capital * tempo * taxa;
 
                     System.out.println("O seu Juros é de: " + juros);
+                    
+                    //taxa Erasmo Batista
                      
                     } else if (op == 3) {
-                     System.out.println("Digite o Valor do Capipta(c)");
-                     capital = Float.parseFloat(entrada.nextLine());
-            
-                     System.out.println("Digite em Quantos meses o capital ficara aplicado(t)");
-                     tempo = Float.parseFloat(entrada.nextLine());
-            
-                     System.out.println("Dgite a taxa(i)");
-                     taxa = Float.parseFloat(entrada.nextLine());
-                    }
-                   if (taxa = taxa){ 
-                    taxa = ((taxa  * capital) / tempo);
-                    
-                    System.out.println("A taxa de juros´r de" + capital +"juros"+taxa);
-                    
-                     // tempo/prazo Giovanna
-                }else if( op == 4){
-                    System.out.println("Digite o  Capital ");
-                    capital = Float.parseFloat(entrada.nextLine());
-                    
-                    System.out.println("Digite o  juros");
-                    juros = Float.parseFloat(entrada.nextLine());
-                    
-                    System.out.println("Digite a Taxa");
-                    taxa= Float.parseFloat(entrada.nextLine());
-                }
-                    if (tempo >= 30) {
-                        
-                        tempo = tempo / 100;
-                    
-                    tempo = juros * taxa * capital / 100;
-                    System.out.println("O tempo é Igual:" + tempo);
+                        System.out.println("Digite o Valor do Capital(c)");
+                        capital = Float.parseFloat(entrada.nextLine());
 
-                }else if (op == 5) {
+                        System.out.println("Digite em Quantos meses o capital ficara aplicado(t)");
+                        tempo = Float.parseFloat(entrada.nextLine());
+
+                        System.out.println("Digite o juros");
+                        juros = Float.parseFloat(entrada.nextLine());
+                    
+                    
+                          tempo = tempo / 12;
+                    
+                        taxa = ( juros /(  capital * tempo ) );
+
+                        System.out.println("A taxa de juros é de " + taxa);
+                        }
+                         // tempo/prazo Giovanna
+
+                        else if( op == 4){
+                        System.out.println("Digite o  Capital ");
+                        capital = Float.parseFloat(entrada.nextLine());
+
+                        System.out.println("Digite o  juros");
+                        juros = Float.parseFloat(entrada.nextLine());
+
+                        System.out.println("Digite a Taxa");
+                        taxa= Float.parseFloat(entrada.nextLine());
+
+                      if (tempo >= 30) {
+
+                            tempo = tempo / 100;
+
+                            tempo = juros * taxa * capital / 100;
+                       }System.out.println("O tempo é Igual:" + tempo);
+
+                
+                    }else if (op == 5) {
                   System.out.println("Obrigado, até a próxima!");
                 }
                 else{             
-                   System.out.println("O nnumero digitado não corresponde a nenhuma das opções.");
+                   System.out.println("O numero digitado não corresponde a nenhuma das opções.");
                     }
                 } while(op != 5);
 
